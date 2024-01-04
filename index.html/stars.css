@@ -1,36 +1,41 @@
-/* Stars animation for explosion effect */
+/* Stars animation with multiple stars erupting at once */
 .stars {
   position: fixed;
-  bottom: 0; /* Stars will start from the bottom */
+  bottom: 0;
   left: 0;
   right: 0;
   z-index: -1;
 }
 
 .stars:before {
-  content: " ";
+  content: "";
   position: absolute;
-  width: 5px;
-  height: 5px;
-  background: red; /* Set stars color to red */;
-  opacity: 0; /* Start with no opacity */
-  animation: animateStars 1s linear infinite;
+  width: 2px;
+  height: 2px;
+  background: red; /* Set stars color to red */
+  opacity: 0;
   border-radius: 50%; /* Making stars circular */
   box-shadow:
     100px 200px red,
-    300px 400px red,
-    600px 800px red,
-    900px 1000px red,
-    1200px 1500px red;
+    150px 300px red,
+    200px 250px red,
+    250px 400px red,
+    300px 350px red,
+    400px 500px red,
+    450px 550px red,
+    500px 600px red,
+    550px 650px red,
+    600px 700px red; /* Define positions of 10 stars */
+  animation: animateStars 3s linear infinite;
 }
 
 @keyframes animateStars {
   0% {
-    opacity: 1; /* Stars are visible at the start */
+    opacity: 1;
     transform: translateY(0) scale(1);
   }
   100% {
-    opacity: 0; /* Stars fade out at the end */
-    transform: translateY(-800px) scale(4); /* Move stars upwards and expand */
+    opacity: 0;
+    transform: translateY(-800px) scale(4);
   }
 }
