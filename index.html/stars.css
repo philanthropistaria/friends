@@ -10,11 +10,11 @@
 .stars:before {
   content: " ";
   position: absolute;
-  width: 2px;
-  height: 2px;
+  width: 5px;
+  height: 5px;
   background: #fff;
   opacity: 0; /* Start with no opacity */
-  animation: animateStars 3s linear infinite;
+  animation: animateStars 1s linear infinite;
   border-radius: 50%; /* Making stars circular */
 }
 
