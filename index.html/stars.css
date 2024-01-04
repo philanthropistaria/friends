@@ -1,36 +1,30 @@
-/* Stars animation */
+/* Stars animation for explosion effect */
 .stars {
-	  position: fixed;
-	    top: 0;
-	      left: 0;
-	        right: 0;
-		  bottom: 0;
-		    z-index: -1;
-	    }
+  position: fixed;
+  bottom: 0; /* Stars will start from the bottom */
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
 
-	    .stars:before {
-		      content: " ";
-		        position: absolute;
-			  width: 2px;
-			    height: 2px;
-			      background: #fff;
-			        box-shadow:
-				    100px 200px #fff,
-				        300px 400px #fff,
-					    600px 800px #fff,
-					        900px 1000px #fff,
-						    1200px 1500px #fff;
-						      animation: animateStars 20s linear infinite;
-					      }
+.stars:before {
+  content: " ";
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #fff;
+  opacity: 0; /* Start with no opacity */
+  animation: animateStars 3s linear infinite;
+  border-radius: 50%; /* Making stars circular */
+}
 
-					      @keyframes animateStars {
-						        from {
-								    transform: translateY(0) rotate(0deg);
-								        opacity: 1;
-									  }
-									    to {
-										        transform: translateY(-2000px) rotate(720deg);
-											    opacity: 0;
-											      }
-										      }
-
+@keyframes animateStars {
+  0% {
+    opacity: 1; /* Stars are visible at the start */
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0; /* Stars fade out at the end */
+    transform: translateY(-800px) scale(4); /* Move stars upwards and expand */
+  }
+}
