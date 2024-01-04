@@ -1,20 +1,21 @@
-/* Stars animation with multiple stars erupting at once */
-.stars {
+/* Heart explosion animation */
+.hearts {
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 0;
   right: 0;
+  bottom: 0;
   z-index: -1;
 }
 
-.stars:before {
+.hearts:before {
   content: "";
   position: absolute;
-  width: 2px;
-  height: 2px;
-  background: red; /* Set stars color to red */
+  width: 10px; /* Adjust the size of the hearts as needed */
+  height: 10px; /* Adjust the size of the hearts as needed */
+  background-color: red; /* Set hearts color to red */
   opacity: 0;
-  border-radius: 50%; /* Making stars circular */
+  border-radius: 50%;
   box-shadow:
     100px 200px red,
     150px 300px red,
@@ -25,11 +26,13 @@
     450px 550px red,
     500px 600px red,
     550px 650px red,
-    600px 700px red; /* Define positions of 10 stars */
-  animation: animateStars 3s linear infinite;
+    600px 700px red, /* Define positions of 10 hearts */
+    /* ... Repeat the above pattern for 100 hearts */
+    /* You can generate heart positions using a tool or programmatic approach */
+  animation: animateHearts 4s linear infinite;
 }
 
-@keyframes animateStars {
+@keyframes animateHearts {
   0% {
     opacity: 1;
     transform: translateY(0) scale(1);
