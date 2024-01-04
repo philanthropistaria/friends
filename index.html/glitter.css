@@ -1,6 +1,6 @@
 /* Glittering effect for h1 */
 h1 {
-	  animation: glitter 2s infinite;
+	  animation: glitter 1s infinite;
   }
 
   @keyframes glitter {
