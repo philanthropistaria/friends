@@ -12,10 +12,16 @@
   position: absolute;
   width: 5px;
   height: 5px;
-  background: #fff;
+  background: red; /* Set stars color to red */;
   opacity: 0; /* Start with no opacity */
   animation: animateStars 1s linear infinite;
   border-radius: 50%; /* Making stars circular */
+  box-shadow:
+    100px 200px red,
+    300px 400px red,
+    600px 800px red,
+    900px 1000px red,
+    1200px 1500px red;
 }
 
 @keyframes animateStars {
