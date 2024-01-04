@@ -21,7 +21,7 @@
     600px 800px red,
     900px 1000px red,
     1200px 1500px red;
-  animation: animateStars 3s linear infinite;
+  animation: animateStars 5s linear infinite;
 }
 
 @keyframes animateStars {
